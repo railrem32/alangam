@@ -26,48 +26,12 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-                height: 100vh; /* Full viewport height */
-                background-image: url('img/back.jpg'); /* Path to your JPEG image */
-                background-size: cover; /* Cover the entire background */
-                background-position: center; /* Center the background image */
-                background-repeat: inherit; /* Do not repeat the image */
-                background-attachment: fixed;
-            }
-
-
-            /* Затемнение фона */
-            body::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(223, 221, 221, 0.5); /* Полупрозрачный черный слой */
-                z-index: -1; /* Помещаем под контент */
-            }
-
-            /* Размытие фона */
-            body::after {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                backdrop-filter: blur(5px); /* Размытие фона */
-                z-index: -1; /* Помещаем под контент */
-            }
-        </style>
 
 
     </head>
     <body>
-
+    <!-- Фоновый слой -->
+    <div class="background"></div>
         <!-- Spinner Start -->
         <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
             <div class="spinner-grow text-primary" role="status"></div>
